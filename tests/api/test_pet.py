@@ -6,18 +6,18 @@ from tests.models.pet_models import Pet
 
 
 class TestPet:
-    @allure.title("Добавление нового питомца")
-    @allure.description("Тест проверяет создание питомца с валидацией данных ответа")
+    @allure.title("Adding new pet")
+    @allure.description("Test verifies pet creation with response data validation")
     @allure.feature("pet")
     def test_add_pet(self, api_config: APIConfig, pet_data: Dict):
-        with allure.step("Валидация входных данных"):
+        with allure.step("Validating input data"):
             pet_model = Pet(**pet_data)
             
-        with allure.step("Отправка запроса на создание питомца"):
+        with allure.step("Sending request to create pet"):
             with requests.Session() as session:
                 response = session.post(url=api_config.base_url, json=pet_data)
 
-        with allure.step("Проверка статуса и данных ответа"):
+        with allure.step("Verifying response status and data"):
             assert response.status_code == 200, f"Unexpected status code: {response.status_code}"
             
             response_data = response.json()

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/RZil_AQA.iml" filepath="$PROJECT_DIR$/.idea/RZil_AQA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/RZil_Petstore.iml" filepath="$PROJECT_DIR$/.idea/RZil_Petstore.iml" />
     </modules>
   </component>
 </project>
