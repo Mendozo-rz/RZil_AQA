@@ -1,5 +1,6 @@
 import requests
 import allure
+
 from tests.config.api_config import APIConfig
 from tests.models.pet_models import Pet
 from tests.config.constants import DEFAULT_PET
